@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;1,400&display=swap');
+
+/* Color Theme Swatches in Hex */
+:root {
+    --primary-color: #6B87BF ;
+    --secondary-color: #7897BF;
+    --third-color: #A7BDD9;
+    --green-color: #A68C3F;
+    --red-color: #A66851;
+}
+
+
+html,body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    height: 100%;
+}
+
+.header {
+    flex: 0 1 auto;
+}
+
+.header__title {
+    background-color: white;
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.list {
+    flex: 0 1 auto;
+    order: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    /*list-style: none;*/
+    /*white-space: nowrap;*/
+    overflow-x: auto;
+}
+
+.list__item {
+    display: inline-block;
+    max-width: 120px;
+    min-width: 120px;
+    /*cursor: pointer;*/
+
+    /*border: 1px solid rgba(100%, 100%, 100%, 0.8);*/
+}
+
+.list__item-title {
+    display: block;
+    margin: 0;
+    padding: 4px 10px;
+    background-color: var(--green-color);
+    font-size: 1.2rem;
+}
+
+.list__item-img {
+    display: block;
+    width: 100%;
+}
+
+.detail-image-container {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-image-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.detail-image {
+    width: 90%;
+}
+
+.detail-image-title {
+    font-family: "Ubuntu", sans-serif;
+    font-style: italic;
+    position: absolute;
+    bottom: -16px;
+    left: 80px;
+    color: white;
+    font-size: 40px;
+    text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
+}
+
+@media all and (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .list {
+        flex-direction: column;
+        order: 0;
+        margin-left: 20px;
+        /* делает эффект при наведении */
+        padding: 0 35px;
+    }
+
+    .list__item {
+        max-width: 260px;
+    }
+
+    .list__item + .list__item {
+        margin-top: 20px;
+    }
+}
